@@ -1,0 +1,36 @@
+# أسرارومفاتيح
+.env
+.env.*
+!.env.example
+.dev.vars
+*.pem
+
+server/.env
+server/.env.*
+client/.env
+client/.env.*
+
+# مكتبات
+node_modules/
+
+# ناتجالبناء
+.next/
+out/
+build/
+dist/
+.open-next/
+.wrangler/
+.vercel
+
+# ملفاتمرفوعةوسجلات
+uploads/
+logs/
+*.log
+
+# أخرى
+*.local
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
