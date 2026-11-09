@@ -1,0 +1,19 @@
+.qf-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.qf-wrap .lead { color: var(--muted); margin: 1rem 0 0; }
+.qf { position: relative; border: 1px solid var(--line); background: rgba(14, 34, 54, 0.6); padding: 1.6rem; display: grid; gap: 1rem; }
+.qf label { display: block; }
+.qf label > span { display: block; margin-bottom: 0.35rem; color: var(--muted); font-size: 0.92rem; }
+.qf input, .qf select, .qf textarea {
+  width: 100%; background: rgba(10, 24, 38, 0.9); border: 1px solid var(--line); color: var(--paper);
+  padding: 0.8rem 0.95rem; font: inherit; border-radius: 2px; transition: border-color 0.2s;
+}
+.qf input:focus, .qf select:focus, .qf textarea:focus { outline: none; border-color: var(--ochre); }
+.qf .two { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.qf .btn { justify-content: center; width: 100%; }
+.qf .btn:disabled { opacity: 0.6; cursor: wait; }
+.qf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.qf-err { border: 1px solid rgba(255, 120, 100, 0.5); background: rgba(255, 120, 100, 0.08); color: #ffb4a6; padding: 0.7rem 1rem; font-size: 0.95rem; }
+.qf-done { border: 1px solid rgba(224, 165, 38, 0.5); background: rgba(14, 34, 54, 0.6); padding: 2rem 1.6rem; }
+.qf-done h3 { font-size: 1.5rem; color: var(--ochre-soft); }
+.qf-done p { color: var(--muted); margin: 0.6rem 0 1.4rem; }
+@media (max-width: 860px) { .qf-wrap { grid-template-columns: 1fr; gap: 2.2rem; } .qf .two { grid-template-columns: 1fr; } }

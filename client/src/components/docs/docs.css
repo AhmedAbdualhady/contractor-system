@@ -1,0 +1,48 @@
+.dc-bar { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; margin-bottom: 1.4rem; }
+.dc-bar .sp { flex: 1; }
+.dc-items { width: 100%; border-collapse: collapse; margin-top: 0.4rem; }
+.dc-items th { text-align: start; font-weight: 500; font-size: 0.85rem; color: var(--muted); padding: 0.4rem 0.4rem; }
+.dc-items td { padding: 0.3rem 0.4rem; vertical-align: top; }
+.dc-items input { width: 100%; background: rgba(14, 34, 54, 0.9); border: 1px solid var(--line); color: var(--paper); padding: 0.6rem 0.7rem; font: inherit; border-radius: 2px; min-width: 70px; }
+.dc-items input:focus { outline: none; border-color: var(--ochre); }
+.dc-items .desc { min-width: 220px; }
+.dc-sum { margin-top: 1.2rem; margin-inline-start: auto; width: min(340px, 100%); }
+.dc-sum div { display: flex; justify-content: space-between; padding: 0.35rem 0; color: var(--muted); }
+.dc-sum .grand { border-top: 1px solid var(--line); margin-top: 0.4rem; padding-top: 0.7rem; color: var(--ochre-soft); font-size: 1.2rem; }
+.dc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.8rem; }
+.dc-grid figure { margin: 0; border: 1px solid var(--line); background: rgba(14, 34, 54, 0.6); }
+.dc-grid img, .dc-grid video { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.dc-grid figcaption { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; padding: 0.5rem 0.7rem; font-size: 0.85rem; color: var(--muted); }
+
+/* ورقة المستند (للعرض والطباعة) */
+.paper { background: #fff; color: #14181d; max-width: 820px; margin: 0 auto; padding: clamp(1.4rem, 4vw, 3rem); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.paper * { color: inherit; }
+.paper .ph { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; padding-bottom: 1.2rem; border-bottom: 2px solid #14181d; }
+.paper .co { display: flex; align-items: center; gap: 0.8rem; }
+.paper .co img { height: 54px; width: auto; }
+.paper .co i { width: 34px; height: 34px; border: 3px solid #b88414; display: inline-block; }
+.paper .co b { display: block; font-size: 1.25rem; font-family: var(--font-display), serif; }
+.paper .co small { color: #555; }
+.paper .dt { text-align: end; }
+.paper .dt h2 { margin: 0; font-size: 1.7rem; font-family: var(--font-display), serif; }
+.paper .dt div { color: #444; font-size: 0.92rem; }
+.paper .parties { display: flex; justify-content: space-between; gap: 1.5rem; margin: 1.5rem 0; flex-wrap: wrap; }
+.paper .parties small { display: block; color: #666; font-size: 0.8rem; }
+.paper table { width: 100%; border-collapse: collapse; margin-top: 0.4rem; }
+.paper th { background: #14181d; color: #fff !important; font-weight: 500; font-size: 0.85rem; padding: 0.6rem 0.7rem; text-align: start; }
+.paper td { padding: 0.65rem 0.7rem; border-bottom: 1px solid #d9dde2; font-size: 0.93rem; }
+.paper .tot { margin-top: 1rem; margin-inline-start: auto; width: min(320px, 100%); }
+.paper .tot div { display: flex; justify-content: space-between; padding: 0.3rem 0; }
+.paper .tot .grand { border-top: 2px solid #14181d; margin-top: 0.3rem; padding-top: 0.6rem; font-size: 1.15rem; font-weight: 700; }
+.paper .notes { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #d9dde2; color: #444; font-size: 0.9rem; white-space: pre-wrap; }
+.paper .sign { display: flex; justify-content: space-between; margin-top: 3.5rem; color: #555; font-size: 0.9rem; }
+.paper .sign span { border-top: 1px solid #555; padding-top: 0.4rem; min-width: 160px; text-align: center; }
+
+@media print {
+  @page { size: A4; margin: 14mm; }
+  html, body { background: #fff !important; }
+  .side, .top, .no-print { display: none !important; }
+  .app { display: block !important; }
+  .main, .content { padding: 0 !important; margin: 0 !important; }
+  .paper { max-width: none; padding: 0; }
+}

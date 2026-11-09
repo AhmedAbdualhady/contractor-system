@@ -1,0 +1,58 @@
+.works { padding: 110px 0; }
+.works-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 2.4rem; }
+.works-head h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+.more { color: var(--ochre-soft); text-decoration: none; }
+.more:hover { color: var(--paper); }
+
+.wk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.wk-grid > :first-child { grid-column: span 2; }
+.wk-card { position: relative; display: block; color: inherit; text-decoration: none; border: 1px solid var(--line); background: var(--ink2); overflow: hidden; animation: wk-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; animation-delay: calc(var(--i, 0) * 90ms); }
+.wk-img { overflow: hidden; aspect-ratio: 4 / 3; }
+.wk-grid > :first-child .wk-img { aspect-ratio: 16 / 9; }
+.wk-img img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
+.wk-card:hover .wk-img img { transform: scale(1.05); }
+.wk-meta { padding: 1rem 1.2rem 1.2rem; border-top: 1px solid var(--line); }
+.wk-meta h3 { font-size: 1.3rem; }
+.wk-meta span { color: var(--muted); font-size: 0.92rem; }
+.wk-tag { position: absolute; top: 0.8rem; inset-inline-start: 0.8rem; font-style: normal; font-size: 0.8rem; background: rgba(10, 24, 38, 0.85); border: 1px solid rgba(224, 165, 38, 0.5); color: var(--ochre-soft); padding: 0 0.7rem; }
+@keyframes wk-in { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+
+.feat { overflow: hidden; }
+.feat-link { display: block; color: inherit; text-decoration: none; }
+.feat img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.feat-cap { padding: 1rem 1.3rem; border-top: 1px solid var(--line); display: grid; }
+.feat-cap b { font-family: var(--font-display), serif; font-size: 1.3rem; }
+.feat-cap span { color: var(--muted); font-size: 0.92rem; }
+
+.shell-main { padding-top: 76px; min-height: 70svh; }
+.pg { padding: 3rem 0 6rem; }
+.pg h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.25; }
+.pg .sub { color: var(--muted); margin: 0.6rem 0 2.4rem; display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; }
+.pg-tag { color: var(--ochre-soft); border: 1px solid rgba(224, 165, 38, 0.5); padding: 0 0.7rem; font-size: 0.88rem; }
+.pg-hero { display: block; width: 100%; max-height: 70svh; object-fit: cover; border: 1px solid var(--line); margin-bottom: 2rem; }
+.pg-desc { color: var(--muted); max-width: 44rem; font-size: 1.1rem; white-space: pre-wrap; }
+.pg-stage { margin: 2.6rem 0 0.8rem; font-size: 1.4rem; }
+.pg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.8rem; }
+.pg-grid button { padding: 0; border: 1px solid var(--line); background: none; cursor: zoom-in; overflow: hidden; }
+.pg-grid img, .pg-grid video { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.pg-grid button:hover img { transform: scale(1.05); }
+.pg-grid figure { margin: 0; border: 1px solid var(--line); }
+.pg-empty { padding: 4rem 1rem; text-align: center; color: var(--muted); border: 1px dashed var(--line); }
+.pg-back { display: inline-block; margin-bottom: 1.4rem; color: var(--muted); text-decoration: none; }
+.pg-back:hover { color: var(--paper); }
+
+.lb { position: fixed; inset: 0; z-index: 200; background: rgba(5, 12, 20, 0.95); display: flex; align-items: center; justify-content: center; animation: wk-in 0.3s ease both; }
+.lb img { max-width: 92vw; max-height: 82svh; object-fit: contain; }
+.lb-cap { position: absolute; bottom: 4vh; inset-inline: 0; text-align: center; color: var(--muted); padding: 0 1rem; }
+.lb button { position: absolute; background: rgba(10, 24, 38, 0.8); border: 1px solid var(--line); color: var(--paper); font: inherit; padding: 0.6rem 1rem; cursor: pointer; }
+.lb button:hover { border-color: var(--ochre); }
+.lb .x { top: 3vh; inset-inline-end: 3vw; }
+.lb .nx { top: 50%; left: 2vw; }
+.lb .pv { top: 50%; right: 2vw; }
+
+@media (max-width: 860px) {
+  .works { padding: 80px 0; }
+  .wk-grid { grid-template-columns: 1fr; }
+  .wk-grid > :first-child { grid-column: auto; }
+  .wk-grid > :first-child .wk-img { aspect-ratio: 4 / 3; }
+}
